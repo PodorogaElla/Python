@@ -11,7 +11,7 @@ month_num = int(input('Введите порядковый номер месяц
 if month_num in range(1, 13):
     for i, el in enumerate(month_list):
         if month_num in el[1:4]:
-            print(f'Введенный номер месяца относится к сезону {el[0]}')
+            print(f'Данный номер месяца относится к сезону {el[0]}')
             break
 else:
     print('Введен некорректный номер месяца!')
