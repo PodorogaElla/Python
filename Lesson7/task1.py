@@ -22,8 +22,8 @@ class TrafficLight:
     change_count = 3  
 
     def __init__(self, init_color='Красный', change_count=3):
-        self.__color = init_color if self.COLOR_TIMES.get(init_color)
-        f" else list(self.COLOR_TIMES.keys())[self.__c_index]
+        self.__color = init_color if self.COLOR_TIMES.get(init_color)\
+        else list(self.COLOR_TIMES.keys())[self.__c_index]
         self.__c_index = list(self.COLOR_TIMES.keys()).index(self.__color)
         self.change_count = change_count
 
@@ -45,5 +45,5 @@ if __name__ == '__main__':
             break
         except ValueError as e:
             print('Ожидаем целое число')
-    lights = TrafficLight('Зеленый', change_count)
+    lights = TrafficLight('Красный', change_count)
     lights.running()
