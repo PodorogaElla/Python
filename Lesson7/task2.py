@@ -12,21 +12,20 @@ length (длина в метрах), width (ширина в метрах).
 '''
 
 class Road:
-    def __init__(self, length: int, width: int):
+    __length = None
+    __width = None
+    weigth = None
+    tickness = None
+    def __init__(self, length, width):
         self._length = length
         self._width = width
+        print('Строительство объекта "Дорога домой"')
 
-    def get_mass(self, mass_1m2: int, thickness: int) -> int:
-        '''
-        Расчет массы асфальта
-        :param mass_1m2: масса асфальта для покрытия одного кв метра дороги 
-        асфальтом, толщиной в 1 см
-        :param thickness: толщины полотна
-        :return: масса асфальта в тоннах
-        '''
-        mass = self._length * self._width * mass_1m2 * thickness // 1000
-        return mass
+    def intake(self):
+        self.weigth = 25
+        self.tickness = 0.05
+        intake = self._length * self._width * self.weigth * self.tickness / 1000
+        print(f'Необходимо {intake} тонн асфальта')
 
-
-road = Road(5000, 20)
-assert road.get_mass(25, 5) == 12500
+road_home = Road(5000, 20)
+road_home.intake()
